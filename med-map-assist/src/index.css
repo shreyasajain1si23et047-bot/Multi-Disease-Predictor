@@ -1,0 +1,160 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Medical Design System - Professional healthcare interface */
+
+@layer base {
+  :root {
+    /* Medical Blue Color Palette */
+    --background: 210 25% 98%;
+    --foreground: 215 25% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 215 25% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 25% 15%;
+
+    /* Primary: Medical Blue */
+    --primary: 210 90% 50%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 210 85% 45%;
+
+    /* Secondary: Soft Medical Teal */
+    --secondary: 180 20% 95%;
+    --secondary-foreground: 180 30% 25%;
+
+    /* Medical Emergency Red */
+    --emergency: 0 85% 60%;
+    --emergency-foreground: 0 0% 100%;
+
+    /* Medical Success Green */
+    --success: 142 70% 45%;
+    --success-foreground: 0 0% 100%;
+
+    /* Medical Warning Amber */
+    --warning: 45 95% 55%;
+    --warning-foreground: 25 5% 15%;
+
+    --muted: 210 15% 96%;
+    --muted-foreground: 215 15% 50%;
+
+    --accent: 195 85% 55%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 85% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 215 15% 88%;
+    --input: 215 15% 90%;
+    --ring: 210 90% 50%;
+
+    --radius: 0.75rem;
+
+    /* Medical Gradients */
+    --gradient-medical: linear-gradient(135deg, hsl(210 90% 50%), hsl(195 85% 55%));
+    --gradient-success: linear-gradient(135deg, hsl(142 70% 45%), hsl(160 60% 50%));
+    --gradient-emergency: linear-gradient(135deg, hsl(0 85% 60%), hsl(15 80% 55%));
+    
+    /* Medical Shadows */
+    --shadow-medical: 0 4px 20px -2px hsl(210 90% 50% / 0.15);
+    --shadow-card: 0 2px 10px -2px hsl(215 25% 15% / 0.1);
+    --shadow-elevated: 0 8px 30px -4px hsl(215 25% 15% / 0.15);
+
+    /* Animations */
+    --transition-medical: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .dark {
+    --background: 215 30% 8%;
+    --foreground: 210 25% 95%;
+
+    --card: 215 25% 12%;
+    --card-foreground: 210 25% 95%;
+
+    --popover: 215 25% 12%;
+    --popover-foreground: 210 25% 95%;
+
+    --primary: 210 90% 55%;
+    --primary-foreground: 215 30% 8%;
+    --primary-hover: 210 85% 60%;
+
+    --secondary: 215 20% 20%;
+    --secondary-foreground: 210 25% 95%;
+
+    --emergency: 0 80% 65%;
+    --emergency-foreground: 0 0% 100%;
+
+    --success: 142 65% 50%;
+    --success-foreground: 0 0% 100%;
+
+    --warning: 45 90% 60%;
+    --warning-foreground: 25 5% 15%;
+
+    --muted: 215 20% 18%;
+    --muted-foreground: 215 15% 65%;
+
+    --accent: 195 80% 60%;
+    --accent-foreground: 215 30% 8%;
+
+    --destructive: 0 80% 65%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 215 20% 25%;
+    --input: 215 20% 25%;
+    --ring: 210 90% 55%;
+
+    /* Dark mode gradients */
+    --gradient-medical: linear-gradient(135deg, hsl(210 90% 55%), hsl(195 80% 60%));
+    --gradient-success: linear-gradient(135deg, hsl(142 65% 50%), hsl(160 55% 55%));
+    --gradient-emergency: linear-gradient(135deg, hsl(0 80% 65%), hsl(15 75% 60%));
+    
+    /* Dark mode shadows */
+    --shadow-medical: 0 4px 20px -2px hsl(210 90% 55% / 0.25);
+    --shadow-card: 0 2px 10px -2px hsl(215 30% 8% / 0.3);
+    --shadow-elevated: 0 8px 30px -4px hsl(215 30% 8% / 0.4);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold text-foreground;
+  }
+
+  .medical-gradient {
+    background: var(--gradient-medical);
+  }
+
+  .success-gradient {
+    background: var(--gradient-success);
+  }
+
+  .emergency-gradient {
+    background: var(--gradient-emergency);
+  }
+
+  .medical-shadow {
+    box-shadow: var(--shadow-medical);
+  }
+
+  .card-shadow {
+    box-shadow: var(--shadow-card);
+  }
+
+  .elevated-shadow {
+    box-shadow: var(--shadow-elevated);
+  }
+
+  .transition-medical {
+    transition: var(--transition-medical);
+  }
+}
